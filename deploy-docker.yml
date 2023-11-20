@@ -16,9 +16,9 @@
         state: started
         enabled: yes
     - name: Pull Docker image
-        docker_image:
-          name: "vamsi1987/ubuntu:0.0.1-{{ DOCKER_TAG }}"
-          source: pull
+      docker_image:
+        name: "vamsi1987/ubuntu:0.0.1-{{ DOCKER_TAG }}"
+        source: pull
     - name: Install docker-py python module
       pip: 
         name: docker-py
