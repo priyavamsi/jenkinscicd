@@ -26,7 +26,7 @@
     - name: start the container
       docker_container:
         name: ubuntu
-        image: "vamsi1987/ubuntu:latest"
+        image: "vamsi1987/ubuntu:{{ DOCKER_TAG }}"
         state: started
         published_ports: 
           - 0.0.0.0:8080:8080
