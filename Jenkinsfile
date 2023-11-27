@@ -17,7 +17,7 @@ pipeline{
         stage('Maven Build') {
            steps {
               sh "mvn clean package"
-              sh "mv target/*.jar target/myweb.jar*
+              sh "mv target/*.jar target/myweb.jar"
             }
         }
         stage('deploy-dev') {
