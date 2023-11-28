@@ -25,8 +25,8 @@ pipeline{
               sshagent(['tomcat-new']) {
               sh """
               scp -o StrictHostKeyChecking=no target/myweb.jar ec2-user@172.31.4.216:/home/ec2-user/apache-tomcat-9.0.83/webapps/
-              ssh ec2-user@172.31.4.216 /home/ec2-user/apache-tomcat-9.0.83/bin/shutdown.sh
-              ssh ec2-user@172.31.4.216 /home/ec2-user/apache-tomcat-9.0.83/bin/startup.sh
+              ssh ec2-user@172.31.4.216 "/home/ec2-user/apache-tomcat-9.0.83/bin/shutdown.sh"
+              ssh ec2-user@172.31.4.216 "/home/ec2-user/apache-tomcat-9.0.83/bin/startup.sh"
               """
             }
         }
